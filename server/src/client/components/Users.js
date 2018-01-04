@@ -26,6 +26,8 @@ class Users extends Component {
   }
 }
 
+export const loadData = () => console.log('Trying to load sum data')
+
 export default connect(
   mapStateToProps,
   { fetchUsers },
