@@ -11,9 +11,13 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 import reducers from './reducers'
 import Routes from './Routes'
 
-const store = createStore( reducers, {}, composeWithDevTools(
+const store = createStore( 
+  reducers, 
+  window.INITIAL_STATE, 
+  composeWithDevTools(
     applyMiddleware(thunk)
-))
+  )
+)
 
 ReactDOM.hydrate(
   <Provider store={store}>
