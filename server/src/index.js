@@ -1,7 +1,10 @@
 import 'babel-polyfill'
-import renderer from './helpers/renderer'
 import express from 'express' 
+import { matchRoutes } from 'react-router-config'
+
 import createStore from './helpers/createStore'
+import renderer from './helpers/renderer'
+import Routes from './client/Routes'
 
 const app = express()
 app.use(express.static('public'))
@@ -9,8 +12,7 @@ app.use(express.static('public'))
 app.get('*', (req, res) => {
   const store = createStore()
 
-  // Some logic to init
-  // and load data into store
+  console.log(matchRoutes(Routes, req.path))
 
   res.send(renderer(req, store))
 })

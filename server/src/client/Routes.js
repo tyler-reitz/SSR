@@ -6,8 +6,8 @@ import Users from './components/Users'
 export default [
   {
     path: '/',
-    component: Home,
     exact: true,
+    component: Home,
   },
   {
     path: '/users',
