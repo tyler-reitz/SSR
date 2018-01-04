@@ -26,9 +26,9 @@ class Users extends Component {
   }
 }
 
-export const loadData = () => console.log('Trying to load sum data')
+export const loadData = ({ dispatch }) => dispatch(fetchUsers())
 
-export default connect(
-  mapStateToProps,
-  { fetchUsers },
-)(Users)
+export default {
+  component: connect( mapStateToProps, { fetchUsers })(Users),
+  loadData
+}
