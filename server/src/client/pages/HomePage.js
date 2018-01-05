@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Home = () => (
+const HomePage = () => (
   <div>
     <div>Hello from SSR</div>
     <button onClick={() => console.log('you clicked!')}>
@@ -9,6 +9,4 @@ const Home = () => (
   </div>
 )
 
-export default {
-  Home
-}
+export default HomePage 
