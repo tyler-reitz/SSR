@@ -5,7 +5,7 @@ import UsersPage, { loadData } from './pages/UsersPage'
 
 export default [
   {
-    component: App,
+    ...App,
     routes: [
       {
         path: '/',
